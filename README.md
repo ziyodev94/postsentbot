@@ -1,0 +1,1 @@
+telegramda botlarni testlash
