@@ -16,10 +16,7 @@ CHANNELS_FILE = 'channels.json'
 MESSAGE_MAP_FILE = 'message_map.json'
 
 # Initialize TelegramClient for user session (for full API access)
-client = TelegramClient('user_session', API_ID, API_HASH)
-
-# Initialize TelegramClient for bot session (for bot commands) 
-bot = TelegramClient('bot_session', API_ID, API_HASH)
+client = TelegramClient('bot_session', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 # Global variables for message processing
 message_processing_lock = asyncio.Lock()
