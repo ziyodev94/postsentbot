@@ -1,4 +1,10 @@
-API_ID = 20894505
-API_HASH = "78235990c41e046d9d76d275c5eb5c79"
-BOT_TOKEN = "7706373757:AAGxFH0MiZXZFPR-FtfRqqyvm-J-8cRZMDI"
-ADMIN_ID = 7276556333 # O'zingizning Telegram IDingizni kiriting
+import os
+from dotenv import load_dotenv
+
+# .env faylni yuklash
+load_dotenv("config.env")  # yoki agar `.env` bo‘lsa: load_dotenv()
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
